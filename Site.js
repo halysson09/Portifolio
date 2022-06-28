@@ -178,3 +178,155 @@ function montarCalculo(valor, tipo) { // Função para montar o cálculo na tab cal
         }
     }
 }
+
+document.addEventListener("keydown", function pressionarTecla(tecla) {
+    if (event.defaultPrevented)
+        return;// Do nothing if the event was already processed
+
+    switch (tecla.key) {
+        case 'Enter':
+            document.querySelector("#btn-Igual").click();
+            document.querySelector("#btn-Igual").style.backgroundColor = '#F2F9FB';
+            break;
+        case 'Escape':
+            document.querySelector("#btn-C").click();
+            document.querySelector("#btn-C").style.backgroundColor = '#F2F9FB';
+            break;
+        case 'Backspace':
+            document.querySelector("#btn-Apagar").click();
+            document.querySelector("#btn-Apagar").style.backgroundColor = '#F2F9FB';
+            break;
+        case '/':
+            document.querySelector("#btn-Dividir").click();
+            document.querySelector("#btn-Dividir").style.backgroundColor = '#F2F9FB';
+            break;
+        case '*':
+            document.querySelector("#btn-Vezes").click();
+            document.querySelector("#btn-Vezes").style.backgroundColor = '#F2F9FB';
+            break;
+        case '%':
+            document.querySelector("#btn-Porcentagem").click();
+            document.querySelector("#btn-Porcentagem").style.backgroundColor = '#F2F9FB';
+            break;
+        case '-':
+            document.querySelector("#btn-Menos").click();
+            document.querySelector("#btn-Menos").style.backgroundColor = '#F2F9FB';
+            break;
+        case '+':
+            document.querySelector("#btn-Mais").click();
+            document.querySelector("#btn-Mais").style.backgroundColor = '#F2F9FB';
+            break;
+        case ',':
+            document.querySelector("#btn-Virgula").click();
+            document.querySelector("#btn-Virgula").style.backgroundColor = '#F2F9FB';
+            break;
+        case '0':
+            document.querySelector("#btn-0").click();
+            document.querySelector("#btn-0").style.backgroundColor = '#F2F9FB';
+            break;
+        case '1':
+            document.querySelector("#btn-1").click();
+            document.querySelector("#btn-1").style.backgroundColor = '#F2F9FB';
+            break;
+        case '2':
+            document.querySelector("#btn-2").click();
+            document.querySelector("#btn-2").style.backgroundColor = '#F2F9FB';
+            break;
+        case '3':
+            document.querySelector("#btn-3").click();
+            document.querySelector("#btn-3").style.backgroundColor = '#F2F9FB';
+            break;
+        case '4':
+            document.querySelector("#btn-4").click();
+            document.querySelector("#btn-4").style.backgroundColor = '#F2F9FB';
+            break;
+        case '5':
+            document.querySelector("#btn-5").click();
+            document.querySelector("#btn-5").style.backgroundColor = '#F2F9FB';
+            break;
+        case '6':
+            document.querySelector("#btn-6").click();
+            document.querySelector("#btn-6").style.backgroundColor = '#F2F9FB';
+            break;
+        case '7':
+            document.querySelector("#btn-7").click();
+            document.querySelector("#btn-7").style.backgroundColor = '#F2F9FB';
+            break;
+        case '8':
+            document.querySelector("#btn-8").click();
+            document.querySelector("#btn-8").style.backgroundColor = '#F2F9FB';
+            break;
+        case '9':
+            document.querySelector("#btn-9").click();
+            document.querySelector("#btn-9").style.backgroundColor = '#F2F9FB';
+            break;
+        default:
+            return;// Quit when this doesn't handle the key event.
+    }
+
+});
+document.addEventListener("keyup", function pressionarTecla(tecla) {
+    if (event.defaultPrevented)
+        return;
+    switch (tecla.key) {
+        case 'Enter':
+            document.querySelector("#btn-Igual").style.backgroundColor = '#98CFE4';
+            break;
+        case 'Escape':
+            document.querySelector("#btn-C").style.backgroundColor = '#98CFE4';
+            break;
+        case 'Backspace':
+            document.querySelector("#btn-Apagar").style.backgroundColor = '#98CFE4';
+            break;
+        case '/':
+            document.querySelector("#btn-Dividir").style.backgroundColor = '#98CFE4';
+            break;
+        case '*':
+            document.querySelector("#btn-Vezes").style.backgroundColor = '#98CFE4';
+            break;
+        case '%':
+            document.querySelector("#btn-Porcentagem").style.backgroundColor = '#98CFE4';
+            break;
+        case '-':
+            document.querySelector("#btn-Menos").style.backgroundColor = '#98CFE4';
+            break;
+        case '+':
+            document.querySelector("#btn-Mais").style.backgroundColor = '#98CFE4';
+            break;
+        case ',':
+            document.querySelector("#btn-Virgula").style.backgroundColor = '#98CFE4';
+            break;
+        case '0':
+            document.querySelector("#btn-0").style.backgroundColor = '#98CFE4';
+            break;
+        case '1':
+            document.querySelector("#btn-1").style.backgroundColor = '#98CFE4';
+            break;
+        case '2':
+            document.querySelector("#btn-2").style.backgroundColor = '#98CFE4';
+            break;
+        case '3':
+            document.querySelector("#btn-3").style.backgroundColor = '#98CFE4';
+            break;
+        case '4':
+            document.querySelector("#btn-4").style.backgroundColor = '#98CFE4';
+            break;
+        case '5':
+            document.querySelector("#btn-5").style.backgroundColor = '#98CFE4';
+            break;
+        case '6':
+            document.querySelector("#btn-6").style.backgroundColor = '#98CFE4';
+            break;
+        case '7':
+            document.querySelector("#btn-7").style.backgroundColor = '#98CFE4';
+            break;
+        case '8':
+            document.querySelector("#btn-8").style.backgroundColor = '#98CFE4';
+            break;
+        case '9':
+            document.querySelector("#btn-9").style.backgroundColor = '#98CFE4';
+            break;
+        default:
+            return;
+    }
+});
