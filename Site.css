@@ -1,0 +1,93 @@
+body {
+    font-family: 'Jacques Francois' !important;
+    font-weight: 400 !important;
+    line-height: 26px !important;
+}
+#imgRiscos {
+    height: 291px;
+    opacity: 0.2;
+    mix-blend-mode: darken;
+    width: 100%;
+}
+
+#imgEU {
+    position: absolute;
+    border-radius: 350px;
+    width: 350px;
+    margin-top: 20px;
+    margin-left: -62%;
+    border: 3px solid #ffffff;
+}
+
+#imgOnepiece {
+    opacity: 0.1;
+    width: 100%;
+    height: 60%;
+    z-index: -1;
+}
+
+#divNome {
+    margin-top: -50px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+#divSobreMim {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 90px;
+}
+#divBotoes {
+    width: 130px;
+    position: absolute;
+    font-size:20px;
+    z-index:10;
+ 
+}
+.conteinerCalculadora {
+    display: flex;
+    width: 282px;
+    height: 272px;
+    flex-wrap: wrap;
+}
+#divCalculadora {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:80px;
+}
+.botoes {
+    width: 70px;
+    height: 45px;
+}
+.numeros {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #98CFE4;
+}
+
+.border-All {
+    border: 2px solid #0A0A09;
+}
+.border-RBL {
+    border-right: 2px solid #0A0A09;
+    border-bottom: 2px solid #0A0A09;
+    border-left: 2px solid #0A0A09;
+}
+
+.border-BL {
+    border-bottom: 2px solid #0A0A09;
+    border-left: 2px solid #0A0A09;
+}
+.click {
+    cursor:pointer;
+}
+#visor {
+    width: 280px;
+    height: 45px;
+    padding-bottom: 37px;
+    overflow:hidden;
+}

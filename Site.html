@@ -1,0 +1,65 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BOA</title>
+    <link href="Site.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"> </script>
+</head>
+<body style="margin:0px !important; background-color: #36426F">
+    <div style="width:100%; height:40%; border-bottom:3px solid #ffffff">
+        <img id="imgRiscos" src="Imagens/Riscos.jpg" />
+        <img id="imgEU" src="Imagens/EU.jpg" />
+        <div id="divNome">Halysson Darago</div>
+    </div>
+    <div id="divBotoes">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="SobreMim-tab" data-bs-toggle="tab" data-bs-target="#divSobreMim" type="button" role="tab" aria-controls="btnSobreMim" aria-selected="true">Sobre Mim</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Calculadora-tab" data-bs-toggle="tab" data-bs-target="#divCalculadora" type="button" role="tab" aria-controls="btnCalculadora" aria-selected="false">Calculadora</button>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" role="tabpanel" tabindex="0">
+        </div>
+        <div class="tab-pane fade" id="divSobreMim" role="tabpanel" aria-labelledby="divSobreMim" tabindex="0">
+              Frases do Disco <br /> <br />
+              Boa,Os cara vai bater palma,Bora,Entra Disco, <br />
+                    Dotinha?,Vai ter?,O cara é um macaco.
+        </div>
+        <div class="tab-pane fade" id="divCalculadora" role="tabpanel" aria-labelledby="divCalculadora" tabindex="0">
+            <input type="hidden" id="primeiroNumero" />
+            <input type="hidden" id="segundoNumero" />
+            <input type="hidden" id="operador" />
+            <input type="hidden" id="total" />
+
+            <div class="conteinerCalculadora">
+                <div class="numeros border-All" id="visor">0</div>
+                <div onclick="montarCalculo('C', 'operador')" class="click botoes numeros border-BL" id="btn-C">C</div>
+                <div onclick="montarCalculo('/', 'operador')" class="click botoes numeros border-BL" id="btn-Dividir">/</div>
+                <div onclick="montarCalculo('%', 'operador')" class="click botoes numeros border-BL" id="btn-Porcentagem">%</div>
+                <div onclick="montarCalculo('<-', 'operador')" class="click botoes numeros border-RBL" id="btn-Apagar">⌫</div>
+                <div onclick="montarCalculo('7', 'numero')" class="click botoes numeros border-BL" id="btn-7">7</div>
+                <div onclick="montarCalculo('8', 'numero')" class="click botoes numeros border-BL" id="btn-8">8</div>
+                <div onclick="montarCalculo('9', 'numero')" class="click botoes numeros border-BL" id="btn-9">9</div>
+                <div onclick="montarCalculo('*', 'operador')" class="click botoes numeros border-RBL" id="btn-Vezes">*</div>
+                <div onclick="montarCalculo('4', 'numero')" class="click botoes numeros border-BL" id="btn-4">4</div>
+                <div onclick="montarCalculo('5', 'numero')" class="click botoes numeros border-BL" id="btn-5">5</div>
+                <div onclick="montarCalculo('6', 'numero')" class="click botoes numeros border-BL" id="btn-6">6</div>
+                <div onclick="montarCalculo('-', 'operador')" class="click botoes numeros border-RBL" id="btn-Menos">-</div>
+                <div onclick="montarCalculo('1', 'numero')" class="click botoes numeros border-BL" id="btn-2">1</div>
+                <div onclick="montarCalculo('2', 'numero')" class="click botoes numeros border-BL" id="btn-3">2</div>
+                <div onclick="montarCalculo('3', 'numero')" class="click botoes numeros border-BL" id="btn-1">3</div>
+                <div onclick="montarCalculo('+', 'operador')" class="click botoes numeros border-RBL" id="btn-Mais">+</div>
+                <div onclick="montarCalculo('0', 'numero')" class="click numeros bBottom border-BL" style="width:140px;height:45px" id="btn-0">0</div>
+                <div onclick="montarCalculo(',', 'numero')" class="click botoes numeros border-BL" id="btn-Virgula">,</div>
+                <div onclick="montarCalculo('=', 'operador')" class="click botoes numeros border-RBL" id="btn-Igual">=</div>
+            </div>
+        </div>
+    </div>
+    <script src="Site.js"></script>
+</body>
+</html>
