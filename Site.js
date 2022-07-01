@@ -114,9 +114,14 @@ function montarCalculo(valor, tipo) { // Função para montar o cálculo na tab cal
                 if (valor == '%') {
                     montarCalculo('C', 'operador');
                     return;
-                }
+                }                    
+                if (Array.from(primeiroNumero).pop() == ',') {
+                    document.getElementById('visor').innerText = primeiroNumero.substring(0, primeiroNumero.length - 1) + valor;
+                    document.getElementById('primeiroNumero').innerText = primeiroNumero.substring(0, primeiroNumero.length - 1);
+                } else 
+                    document.getElementById('visor').innerText += valor;
+
                 document.getElementById('operador').innerText = valor;
-                document.getElementById('visor').innerText += valor;
                 return;
             }
         }
@@ -133,7 +138,7 @@ function montarCalculo(valor, tipo) { // Função para montar o cálculo na tab cal
                         if ((valor == ',' && segundoNumero.indexOf(',') == -1) || valor != ',') { // se já tiver vírgula, não põe outra ou põe números.
                             document.getElementById('segundoNumero').innerText += valor;
                             document.getElementById('visor').innerText += valor;
-                        }
+                        } 
                     }
                 }
             } else {
