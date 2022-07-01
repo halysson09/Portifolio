@@ -335,3 +335,25 @@ document.addEventListener("keyup", function pressionarTecla(tecla) {
             return;
     }
 });
+function validaCamposFormulario(nome, genero, steam, origin) {
+    if (nome == '' || genero == '' || steam == '' || origin == '') {
+        alert('Macaco');
+        return false;
+    }
+    //var padraoData = /^[0-9]{2}/[0-9]{2}/[0-9]{4}$/;
+    //if (!padraoData.test(cadastro)) {
+    //    alert("Digite a data no formato dd/mm/aaaa");
+    //    return false;
+    //}
+    return true;
+}
+function proximoRegistro() {
+    var proximoId = 0;
+    var registrosId = document.getElementsByClassName('registros');
+
+    for (let i = 0; i < registrosId.length; i++) {
+        if (proximoId < parseInt(registrosId[i].id))
+            proximoId = parseInt(registrosId[i].id);
+    }
+    return (proximoId + 1).toString();
+}

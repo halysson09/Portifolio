@@ -75,23 +75,9 @@
                         <label for="nomeJogo">Nome do Jogo</label>
                         <input type="text" class="form-control" id="nomeJogo" placeholder="GTA 5">
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div>
-                        <label for="genero">Gênero</label> <br />
-                        <select id="genero" name="genero">
+                    <div class="form-group">
+                        <label for="genero">Gênero</label> 
+                        <select class="form-select" id="genero">
                             <option selected></option>
                             <option>ACTION</option>
                             <option>ADVENTURE</option>
@@ -102,25 +88,39 @@
                             <option>RPG</option>
                         </select>
                     </div>
-                    <div>
-                        <label>Data de Lançamento</label> <br />
-                        <input id="date" placeholder="30/06/2000" />
+                    <div class="form-group">
+                        <label for="nomeJogo">Data de Lançamento</label>
+                        <input type="date" class="form-control" id="date" placeholder="30/12/2000">
                     </div>
-                    <div>
-                        <label>Disponivel em</label> <br />
-                        <div style="justify-content:space-between; display:flex; width:150px">
-                            <div>
-                                <input type="checkbox" id="steam" name="steam" />
-                                <label for="steam">Steam</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="origin" name="origin" />
-                                <label for="origin">Origin</label>
-                            </div>
-                        </div>
+                    <div class="custom-control custom-checkbox" id="div-check1">
+                        <input type="checkbox" class="custom-control-input" id="steam">
+                        <label class="custom-control-label" for="customCheck1">Steam</label>
+                    </div>
+                    <div class="custom-control custom-checkbox" id="div-check2">
+                        <input type="checkbox" class="custom-control-input" id="origin">
+                        <label class="custom-control-label" for="customCheck1">Origin</label>
                     </div>
 
                 </form>
+                <table id="tabelaFormulario">
+                    <tr>
+                        <th>Jogos</th>
+                        <th>Gênero</th>
+                        <th>Data</th>
+                        <th>Steam</th>
+                        <th>Origin</th>
+                        <th>Opções</th>
+                    </tr>
+                </table>
+                <div id="btn-Salvar">
+                    <button>
+                   
+                        <img src="bootstrap/Icones/svg/check.svg" />
+                    </button>
+                    <button>
+                        <img src="bootstrap/Icones/svg/x.svg" />
+                    </button>
+                </div>
             </div>
         </div>
     </div>
