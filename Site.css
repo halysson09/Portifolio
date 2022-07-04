@@ -2,28 +2,28 @@ body {
     font-family: 'Jacques Francois' !important;
     font-weight: 400 !important;
     line-height: 26px !important;
+    color: white !important;
 }
-#imgRiscos {
-    height: 291px;
-    opacity: 0.2;
-    mix-blend-mode: darken;
-    width: 100%;
-}
-
-#imgEU {
+#imgEu {
     position: absolute;
-    border-radius: 350px;
-    width: 350px;
-    margin-top: 20px;
-    margin-left: -62%;
-    border: 3px solid #ffffff;
+    clip-path: ellipse(24% 50% at 45% 50%);
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
 #divNome {
-    margin-top: -50px;
-    text-align: center;
-    font-size: 30px;
+    margin-top: 150px;
+    margin-left: 40%;
+    font-size: 50px;
     color: white;
+    position:absolute;
+    filter:blur(25px);
+    animation: nome 2s ease-in-out infinite alternate;
+}
+
+@keyframes nome {
+    from { filter: blur(0) }
+    to { filter: blur(25px) }
 }
 
 #divSobreMim {
@@ -52,6 +52,7 @@ body {
     margin-top: 80px;
     box-shadow: 0 0 0 0;
     outline: 0;
+    color: black;
 }
 .botoes {
     width: 70px;
@@ -61,10 +62,13 @@ body {
     font-size: 30px;
     text-align: center;
     padding-top: 8px;
-    background-color: #98CFE4;
+    background-color: #D8D8D8;
 }
 .numeros:active {
-    background-color: #F2F9FB;
+    background-color: #F9FE00;
+}
+.btn-active {
+    background-color: #F9FE00;
 }
 
 .border-All {
@@ -107,6 +111,7 @@ body {
 #div-check1 {
     margin-top: 44px;
     margin-right: 25px;
+    color: white;
 }
 #div-check2 {
     margin-top: 44px;

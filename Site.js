@@ -191,79 +191,79 @@ document.addEventListener("keydown", function pressionarTecla(tecla) {
     switch (tecla.key) {
         case 'Enter':
             document.querySelector("#btn-Igual").click();
-            document.querySelector("#btn-Igual").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Igual").classList.add('btn-active');
             break;
         case 'Escape':
             document.querySelector("#btn-C").click();
-            document.querySelector("#btn-C").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-C").classList.add('btn-active');
             break;
         case 'Backspace':
             document.querySelector("#btn-Apagar").click();
-            document.querySelector("#btn-Apagar").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Apagar").classList.add('btn-active');
             break;
         case '/':
             document.querySelector("#btn-Dividir").click();
-            document.querySelector("#btn-Dividir").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Dividir").classList.add('btn-active');
             break;
         case '*':
             document.querySelector("#btn-Vezes").click();
-            document.querySelector("#btn-Vezes").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Vezes").classList.add('btn-active');
             break;
         case '%':
             document.querySelector("#btn-Porcentagem").click();
-            document.querySelector("#btn-Porcentagem").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Porcentagem").classList.add('btn-active');
             break;
         case '-':
             document.querySelector("#btn-Menos").click();
-            document.querySelector("#btn-Menos").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Menos").classList.add('btn-active');
             break;
         case '+':
             document.querySelector("#btn-Mais").click();
-            document.querySelector("#btn-Mais").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Mais").classList.add('btn-active');
             break;
         case ',':
             document.querySelector("#btn-Virgula").click();
-            document.querySelector("#btn-Virgula").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-Virgula").classList.add('btn-active');
             break;
         case '0':
             document.querySelector("#btn-0").click();
-            document.querySelector("#btn-0").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-0").classList.add('btn-active');
             break;
         case '1':
             document.querySelector("#btn-1").click();
-            document.querySelector("#btn-1").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-1").classList.add('btn-active');
             break;
         case '2':
             document.querySelector("#btn-2").click();
-            document.querySelector("#btn-2").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-2").classList.add('btn-active');
             break;
         case '3':
             document.querySelector("#btn-3").click();
-            document.querySelector("#btn-3").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-3").classList.add('btn-active');
             break;
         case '4':
             document.querySelector("#btn-4").click();
-            document.querySelector("#btn-4").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-4").classList.add('btn-active');
             break;
         case '5':
             document.querySelector("#btn-5").click();
-            document.querySelector("#btn-5").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-5").classList.add('btn-active');
             break;
         case '6':
             document.querySelector("#btn-6").click();
-            document.querySelector("#btn-6").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-6").classList.add('btn-active');
             break;
         case '7':
             document.querySelector("#btn-7").click();
-            document.querySelector("#btn-7").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-7").classList.add('btn-active');
             break;
         case '8':
             document.querySelector("#btn-8").click();
-            document.querySelector("#btn-8").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-8").classList.add('btn-active');
             break;
         case '9':
             document.querySelector("#btn-9").click();
-            document.querySelector("#btn-9").style.backgroundColor = '#F2F9FB';
+            document.querySelector("#btn-9").classList.add('btn-active');
             break;
         default:
             return;// Quit when this doesn't handle the key event.
@@ -275,61 +275,61 @@ document.addEventListener("keyup", function pressionarTecla(tecla) {
         return;
     switch (tecla.key) {
         case 'Enter':
-            document.querySelector("#btn-Igual").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Igual").classList.remove('btn-active');
             break;
         case 'Escape':
-            document.querySelector("#btn-C").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-C").classList.remove('btn-active');
             break;
         case 'Backspace':
-            document.querySelector("#btn-Apagar").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Apagar").classList.remove('btn-active');
             break;
         case '/':
-            document.querySelector("#btn-Dividir").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Dividir").classList.remove('btn-active');
             break;
         case '*':
-            document.querySelector("#btn-Vezes").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Vezes").classList.remove('btn-active');
             break;
         case '%':
-            document.querySelector("#btn-Porcentagem").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Porcentagem").classList.remove('btn-active');
             break;
         case '-':
-            document.querySelector("#btn-Menos").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Menos").classList.remove('btn-active');
             break;
         case '+':
-            document.querySelector("#btn-Mais").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Mais").classList.remove('btn-active');
             break;
         case ',':
-            document.querySelector("#btn-Virgula").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-Virgula").classList.remove('btn-active');
             break;
         case '0':
-            document.querySelector("#btn-0").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-0").classList.remove('btn-active');
             break;
         case '1':
-            document.querySelector("#btn-1").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-1").classList.remove('btn-active');
             break;
         case '2':
-            document.querySelector("#btn-2").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-2").classList.remove('btn-active');
             break;
         case '3':
-            document.querySelector("#btn-3").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-3").classList.remove('btn-active');
             break;
         case '4':
-            document.querySelector("#btn-4").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-4").classList.remove('btn-active');
             break;
         case '5':
-            document.querySelector("#btn-5").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-5").classList.remove('btn-active');
             break;
         case '6':
-            document.querySelector("#btn-6").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-6").classList.remove('btn-active');
             break;
         case '7':
-            document.querySelector("#btn-7").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-7").classList.remove('btn-active');
             break;
         case '8':
-            document.querySelector("#btn-8").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-8").classList.remove('btn-active');
             break;
         case '9':
-            document.querySelector("#btn-9").style.backgroundColor = '#98CFE4';
+            document.querySelector("#btn-9").classList.remove('btn-active');
             break;
         default:
             return;
