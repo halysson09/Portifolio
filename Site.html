@@ -71,13 +71,14 @@
         </div>
         <div class="tab-pane" id="jogos" role="tabpanel" aria-labelledby="jogos-tab">
             <div id="divJogos">
-                <form id="formulario">
+                <div id="formulario">
+                    <input type="hidden" id="idJogos" />
                     <div class="form-group">
                         <label for="nomeJogo">Nome do Jogo</label>
                         <input type="text" class="form-control" id="nomeJogo" placeholder="GTA 5">
                     </div>
                     <div class="form-group">
-                        <label for="genero">Gênero</label> 
+                        <label for="genero">Gênero</label>
                         <select class="form-select" id="genero">
                             <option selected></option>
                             <option>ACTION</option>
@@ -90,75 +91,61 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="nomeJogo">Data de Lançamento</label>
+                        <label for="date">Data de Lançamento</label>
                         <input type="date" class="form-control" id="date" placeholder="30/12/2000">
                     </div>
-                    <div class="custom-control custom-checkbox" id="div-check1">
-                        <input type="checkbox" class="custom-control-input" id="steam">
-                        <label class="custom-control-label" for="customCheck1">Steam</label>
+                    <div style="width:158px; display:flex; flex-direction:column">
+                        <label for="disponivel">Disponível Em</label>
+                        <div style="display:flex; justify-content:space-between; margin-top:10px">
+                            <div class="custom-control custom-checkbox" id="div-check1">
+                                <input type="checkbox" class="custom-control-input" id="steam">
+                                <label class="custom-control-label" for="customCheck1">Steam</label>
+                            </div>
+                            <div class="custom-control custom-checkbox" id="div-check2">
+                                <input type="checkbox" class="custom-control-input" id="origin">
+                                <label class="custom-control-label" for="customCheck1">Origin</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="custom-control custom-checkbox" id="div-check2">
-                        <input type="checkbox" class="custom-control-input" id="origin">
-                        <label class="custom-control-label" for="customCheck1">Origin</label>
-                    </div>
+                    <div id="div-Salvar">
+                        <button onclick="gravarRegistro()" class="btn-Formulario">
 
-                </form>
-                <table id="tabelaFormulario">
-                    <tr>
-                        <th>Jogos</th>
-                        <th>Gênero</th>
-                        <th>Data</th>
-                        <th>Steam</th>
-                        <th>Origin</th>
-                        <th>Opções</th>
-                    </tr>
-                </table>
-                <div id="btn-Salvar">
-                    <button>
-                   
-                        <img src="bootstrap/Icones/svg/check.svg" />
-                    </button>
-                    <button>
-                        <img src="bootstrap/Icones/svg/x.svg" />
-                    </button>
+                            <img src="bootstrap/Icones/svg/check.svg" />
+                        </button>
+                        <button onclick="limparFormulario()" class="btn-Formulario">
+                            <img src="bootstrap/Icones/svg/x.svg" />
+                        </button>
+                    </div>
+                </div>
+
+                <div style="width: 764px; margin-top: 20px; text-align: center">
+                    <table id="tabelaFormulario" class="table table-light table-bordered">
+                        <tbody id="bodyTabela">
+                            <tr class="corText">
+                                <th class="corTitulo">Jogos</th>
+                                <th class="corTitulo">Gênero</th>
+                                <th class="corTitulo">Data</th>
+                                <th class="corTitulo">Steam</th>
+                                <th class="corTitulo">Origin</th>
+                                <th class="corTitulo">Opções</th>
+                            </tr>
+                            <tr id="1" class="corText registros">
+                                <td>Skyrim</td>
+                                <td>RPG</td>
+                                <td>29/03/2012</td>
+                                <td>V</td>
+                                <td>X</td>
+                                <td>
+                                    <img onclick="editarRegistro(1)" src="bootstrap/Icones/svg/pencil.svg" alt="Bootstrap" width="16" height="16" style="cursor: pointer"> 
+                                    <img onclick="excluirRegistro(1)" src="bootstrap/Icones/svg/trash.svg" alt="Bootstrap" width="16" height="16" style="cursor: pointer; margin-left:13px;"> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--<div id="divBotoes">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="SobreMim-tab" data-bs-toggle="tab" data-bs-target="#divSobreMim" type="button" role="tab" aria-controls="btnSobreMim" aria-selected="true">Sobre Mim</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="Calculadora-tab" data-bs-toggle="tab" data-bs-target="#divCalculadora" type="button" role="tab" aria-controls="btnCalculadora" aria-selected="false">Calculadora</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="Jogos-tab" data-bs-toggle="tab" data-bs-target="#divJogos" type="button" role="tab" aria-controls="btnJogos" aria-selected="true">Jogos</button>
-            </li>
-        </ul>
-
-    </div>
-    <div class="tab-content" id="myTabContent">
-
-
-            
-        </div>
-            -->
-            <script src="Site.js"></script>
+    <script src="Site.js"></script>
 </body>
 </html>

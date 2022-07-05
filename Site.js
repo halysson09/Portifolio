@@ -335,6 +335,9 @@ document.addEventListener("keyup", function pressionarTecla(tecla) {
             return;
     }
 });
+
+
+
 function validaCamposFormulario(nome, genero, steam, origin) {
     if (nome == '' || genero == '' || steam == '' || origin == '') {
         alert('Macaco');
@@ -347,6 +350,7 @@ function validaCamposFormulario(nome, genero, steam, origin) {
     //}
     return true;
 }
+
 function proximoRegistro() {
     var proximoId = 0;
     var registrosId = document.getElementsByClassName('registros');
@@ -357,3 +361,74 @@ function proximoRegistro() {
     }
     return (proximoId + 1).toString();
 }
+
+function gravarRegistro() {
+    var idJogos = document.getElementById('idJogos').value;
+    var proximoId = proximoRegistro();
+
+    var nomeJogo = document.getElementById('nomeJogo').value;
+    var genero = document.getElementById('genero').value;
+    var date = document.getElementById('date').value;
+    var steam = document.getElementById('steam').checked ? '<img src="bootstrap/Icones/svg/check-lg.svg" /> ' : '<img src="bootstrap/Icones/svg/x-lg.svg" /> ';
+    var origin = document.getElementById('origin').checked ? '<img src="bootstrap/Icones/svg/check-lg.svg" /> ' : '<img src="bootstrap/Icones/svg/x-lg.svg" /> ';
+
+    console.log('idJogos: ' + idJogos);
+    console.log('nomeJogo: ' + nomeJogo);
+    console.log('genero: ' + genero);
+    console.log('date: ' + date);
+    console.log('steam: ' + steam);
+    console.log('origin: ' + origin);
+
+    var idTr = idJogos != '' ? idJogos : proximoId;
+    var novaTr = '<tr id="' + idTr + '" class="corText registros"> \
+                            <td>' + nomeJogo + '</td> \
+                            <td>' + genero + '</td> \
+                            <td>' + date + '</td> \
+                            <td>' + steam + '</td> \
+                            <td>' + origin + '</td> \
+                            <td> \
+                                    <img onclick="editarRegistro(' + idTr + ')" src="bootstrap/Icones/svg/pencil.svg" alt="Bootstrap" width="16" height="16" style="cursor: pointer"> \
+                                    <img onclick="excluirRegistro(' + idTr + ')" src="bootstrap/Icones/svg/trash.svg" alt="Bootstrap" width="16" height="16" style="cursor: pointer; margin-left:13px;"> \
+                            </td> \
+                        </tr>';
+
+    if (document.getElementById('idJogos').value == '')
+        document.getElementById('bodyTabela').innerHTML += novaTr;
+    else
+        document.getElementById(idTr).innerHTML = novaTr;
+
+    apagarDados();
+}
+
+function editarRegistro(id) {
+    document.getElementById('idJogos').value = id;
+    var tr = document.getElementById(id);
+
+    document.getElementById('nomeJogo').value = tr.children[0].innerHTML;
+
+    const dropDown = document.getElementById('genero');
+    document.getElementById('genero').selectedIndex = [...dropDown.options].findIndex(option => option.text === tr.children[1].innerHTML);
+
+    document.getElementById('steam' + tr.children[2].innerHTML).checked = true;
+    document.getElementById('origin' + tr.children[2].innerHTML).checked = true;
+
+    document.getElementById('date').value = tr.children[3].innerHTML;
+}
+
+function excluirRegistro(id) {
+    if (confirm("Tem certeza que deseja excluir?") == true)
+        document.getElementById(id).remove();
+    else
+        return;
+}
+
+function limparFormulario() {
+    document.getElementById('idJogos').value = '';
+
+    document.getElementById('nomeJogo').value = '';
+    document.getElementById('steam').checked = false;
+    document.getElementById('origin').checked = false;
+    document.getElementById('date').value = '';
+    document.getElementById('genero').selectedIndex = 0;
+}
+

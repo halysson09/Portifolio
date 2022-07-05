@@ -29,7 +29,7 @@ body {
 #divSobreMim {
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 80px;
 }
 #divBotoes {
@@ -108,25 +108,27 @@ body {
     margin-left: 130px;
     padding: 0 20px 0 20px;
 }
-#div-check1 {
-    margin-top: 44px;
-    margin-right: 25px;
-    color: white;
-}
-#div-check2 {
-    margin-top: 44px;
-    margin-right: 25px;
 
-}
 #tabelaFormulario {
     width: 738px;
     /*height: 200px; se der pau bota altura denovo*/
     margin-left: 260px;
+    border: 1px solid gray;
+    text-align: center;
+ 
 }
-table th {
-    border: 1px solid #000;
-    text-align:center;
+.corTitulo {
+    background: linear-gradient(180deg, #42CCF8 0%, rgba(66, 204, 248, 0) 100%);
 }
-#btn-Salvar {
-
+.corText {
+    color: black;
+}
+#div-Salvar {
+    height: 55px;
+    padding-top: 34px;
+    width: 100px;
+}
+.btn-Formulario {
+    width: 30px;
+    height: 25px
 }
