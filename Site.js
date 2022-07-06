@@ -338,16 +338,11 @@ document.addEventListener("keyup", function pressionarTecla(tecla) {
 
 
 
-function validaCamposFormulario(nome, genero, steam, origin) {
-    if (nome == '' || genero == '' || steam == '' || origin == '') {
+function validaCamposFormulario(nome, genero, date) {
+    if (nome == '' || genero == '' || date == '') {
         alert('Macaco');
         return false;
     }
-    //var padraoData = /^[0-9]{2}/[0-9]{2}/[0-9]{4}$/;
-    //if (!padraoData.test(cadastro)) {
-    //    alert("Digite a data no formato dd/mm/aaaa");
-    //    return false;
-    //}
     return true;
 }
 
@@ -379,13 +374,17 @@ function gravarRegistro() {
     console.log('steam: ' + steam);
     console.log('origin: ' + origin);
 
+    if (!validaCamposFormulario(nomeJogo, genero, date))
+        return;
+
+
     var idTr = idJogos != '' ? idJogos : proximoId;
     var novaTr = '<tr id="' + idTr + '" class="corText registros"> \
                             <td>' + nomeJogo + '</td> \
                             <td>' + genero + '</td> \
                             <td>' + date + '</td> \
-                            <td>' + steam + '</td> \
-                            <td>' + origin + '</td> \
+                            <td class="' + document.getElementById('steam').checked + '">' + steam + '</td> \
+                            <td class="' + document.getElementById('origin').checked + '">' + origin + '</td> \
                             <td> \
                                     <img onclick="editarRegistro(' + idTr + ')" src="bootstrap/Icones/svg/pencil.svg" alt="Bootstrap" width="16" height="16" style="cursor: pointer"> \
                                     <img onclick="excluirRegistro(' + idTr + ')" src="bootstrap/Icones/svg/trash.svg" alt="Bootstrap" width="16" height="16" style="cursor: pointer; margin-left:13px;"> \
@@ -397,7 +396,7 @@ function gravarRegistro() {
     else
         document.getElementById(idTr).innerHTML = novaTr;
 
-    apagarDados();
+    limparFormulario();
 }
 
 function editarRegistro(id) {
@@ -408,11 +407,16 @@ function editarRegistro(id) {
 
     const dropDown = document.getElementById('genero');
     document.getElementById('genero').selectedIndex = [...dropDown.options].findIndex(option => option.text === tr.children[1].innerHTML);
+    document.getElementById('date').value = tr.children[2].innerHTML;
 
-    document.getElementById('steam' + tr.children[2].innerHTML).checked = true;
-    document.getElementById('origin' + tr.children[2].innerHTML).checked = true;
+    // (if else in line) outro jeito de fazer um if quando tiver o simbolo da interrogacao(?) é um if, depois vem o resultado,e depois dos dois pontos(:) vem o resultado do else.
+    document.getElementById('steam').checked = tr.children[3].classList.contains('true') ? true : false; 
+    document.getElementById('origin').checked = tr.children[4].classList.contains('true') ? true : false;
 
-    document.getElementById('date').value = tr.children[3].innerHTML;
+    //if (tr.children[3].classList.contains('true'))
+    //    document.getElementById('steam').checked = true;
+    //else
+    //    document.getElementById('steam').checked = false;
 }
 
 function excluirRegistro(id) {
